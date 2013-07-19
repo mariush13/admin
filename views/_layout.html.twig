@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <div>{{ error }}</div>
+        {% if register_form %}
+            {{ register_form.header|raw }}
+            {{ register_form.inputs['register_username']|raw }}
+            {{ register_form.inputs['register_password']|raw }}
+            <input type="submit">
+            {{ register_form.footer|raw }}
+        {% endif %}
+        {% if login_form %}
+            {{ login_form.header|raw }}
+            {{ login_form.inputs['login_username']|raw }}
+            {{ login_form.inputs['login_password']|raw }}
+            <input type="submit">
+            {{ login_form.footer|raw }}
+        {% endif %}
+    </body>
+</html>
